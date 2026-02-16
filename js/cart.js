@@ -1,7 +1,7 @@
-const cartCount = document.getElementById("cart-count");
-let cart = [];
+export const cart = [];
 
-function addToCart(product) {
+export function addToCart(product) {
   cart.push(product);
-  cartCount.textContent = cart.length; // updates bubble
+  const cartCount = document.getElementById("cart-count");
+  if(cartCount) cartCount.textContent = cart.length;
 }
