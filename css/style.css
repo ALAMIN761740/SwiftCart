@@ -1,0 +1,136 @@
+/* ===========================
+   Global Styles
+=========================== */
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+}
+
+.btn {
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+/* ===========================
+   Product & Trending Cards
+=========================== */
+#product-list .card,
+#trending-container .card {
+  border-radius: 1rem;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+#product-list .card:hover,
+#trending-container .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Image */
+#product-list .card img,
+#trending-container .card img {
+  object-fit: contain;
+  height: 14rem;
+  transition: transform 0.3s ease;
+}
+
+#product-list .card img:hover,
+#trending-container .card img:hover {
+  transform: scale(1.05);
+}
+
+/* Category Badge */
+.card span.bg-base-200 {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: #1d4ed8; /* Tailwind primary color */
+}
+
+/* Product Name */
+.card h3 {
+  min-height: 3rem;
+  color: #111827; /* Gray-900 */
+  font-size: 0.9rem;
+}
+
+/* Price */
+.card p.text-primary {
+  font-size: 1.1rem;
+  color: #1d4ed8; /* Tailwind primary color */
+  font-weight: 700;
+}
+
+/* Buttons */
+.card .btn-outline {
+  border-color: #1d4ed8;
+  color: #1d4ed8;
+}
+
+.card .btn-outline:hover {
+  background-color: #1d4ed8;
+  color: white;
+}
+
+.card .btn-primary {
+  background-color: #1d4ed8;
+  color: white;
+}
+
+.card .btn-primary:hover {
+  background-color: #1e40af; /* darker blue */
+}
+
+/* ===========================
+   Stars
+=========================== */
+.card span.text-orange-400 {
+  font-size: 0.75rem;
+}
+
+.card span.text-orange-400 i {
+  color: #f59e0b; /* Tailwind amber-500 */
+  margin-right: 1px;
+}
+
+/* ===========================
+   Category Filter Buttons
+=========================== */
+section button.btn-primary {
+  background-color: #1d4ed8;
+  color: white;
+}
+
+section button.btn-outline {
+  border-color: #1d4ed8;
+  color: #1d4ed8;
+}
+
+section button.btn-outline:hover {
+  background-color: #1d4ed8;
+  color: white;
+}
+
+/* Active state handled via JS */
+section button.btn-primary {
+  font-weight: 600;
+}
+
+/* ===========================
+   Responsive tweaks
+=========================== */
+@media (max-width: 768px) {
+  #product-list .card img,
+  #trending-container .card img {
+    height: 12rem;
+  }
+}

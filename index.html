@@ -5,53 +5,44 @@
   <title>SwiftCart</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Tailwind CSS -->
+   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- DaisyUI -->
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.10.2/dist/full.min.css" rel="stylesheet" />
-
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="./css/style.css">
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./css/style.css">
 </head>
-<body>
+<body class="bg-gray-100">
 
 <!-- Navbar -->
 <header id="navbar-section">
   <nav class="bg-white shadow-md px-6 py-3 flex justify-between items-center">
-    <a href="#" class="text-2xl font-bold text-primary flex items-center gap-2">
-      <i class="fa-solid fa-bag-shopping text-primary"></i>
-      <span>SwiftCart</span>
+    <a href="index.html" class="text-2xl font-bold text-primary flex items-center gap-2">
+      <i class="fa-solid fa-bag-shopping text-primary"></i> <span>SwiftCart</span>
     </a>
-
     <ul class="hidden md:flex space-x-6 text-gray-700 font-medium">
-      <li><a href="#hero-section" class="hover:text-primary">Home</a></li>
-      <li><a href="#trending-section" class="hover:text-primary">Products</a></li>
-      <li><a href="#features-section" class="hover:text-primary">About</a></li>
-      <li><a href="#newsletter-section" class="hover:text-primary">Contact</a></li>
+      <li><a href="index.html" class="hover:text-primary">Home</a></li>
+      <li><a href="products.html" class="text-primary">Products</a></li>
+      <li><a href="index.html#features-section" class="hover:text-primary">About</a></li>
+      <li><a href="index.html#newsletter-section" class="hover:text-primary">Contact</a></li>
     </ul>
-
     <div class="flex items-center space-x-3">
-      <button class="btn p-3">
+      <button class="btn p-3 relative">
         <i class="fa-solid fa-cart-shopping"></i>
-        <span id="cart-count" class="ml-1 text-white bg-red-500 px-2 rounded-full text-xs">0</span>
+        <span id="cart-count" class="absolute -top-1 -right-1 text-xs bg-red-500 text-white px-2 rounded-full">0</span>
       </button>
-
-      <!-- Mobile Dropdown -->
-      <div class="dropdown md:hidden">
-        <label tabindex="0" class="btn p-3">
+      <div class="dropdown md:hidden relative">
+        <button tabindex="0" class="btn btn-ghost p-3">
           <i class="fa-solid fa-bars"></i>
-        </label>
-        <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52 mt-2">
-          <li><a href="#hero-section">Home</a></li>
-          <li><a href="#trending-section">Products</a></li>
-          <li><a href="#features-section">About</a></li>
-          <li><a href="#newsletter-section">Contact</a></li>
+        </button>
+        <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52 mt-2 absolute right-0">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="index.html#features-section">About</a></li>
+          <li><a href="index.html#newsletter-section">Contact</a></li>
         </ul>
       </div>
     </div>
@@ -71,79 +62,47 @@
   </div>
 </section>
 
-
-
-
-<!--  Why Choose Us Section -->
+<!-- Why Choose Us Section -->
 <section id="features-section" class="py-16 bg-base-100">
   <div class="max-w-7xl mx-auto px-6">
-
-    <!-- Section Title -->
     <div class="text-center mb-12">
       <h2 class="text-3xl md:text-4xl font-bold">Why Choose Us</h2>
       <p class="text-gray-500 mt-3">
         We provide the best shopping experience with top-notch services.
       </p>
     </div>
-
-    <!-- Features Grid -->
     <div class="grid md:grid-cols-4 gap-8">
-
-      <!-- Feature 1 -->
       <div class="bg-base-200 p-6 rounded-xl text-center shadow-sm hover:shadow-md transition">
         <div class="text-primary mb-4 flex justify-center">
-          <!-- Truck Icon -->
           <i class="fa-solid fa-truck fa-2x"></i>
         </div>
         <h3 class="font-semibold text-lg mb-2">Fast Delivery</h3>
-        <p class="text-gray-500 text-sm">
-          Get your orders delivered quickly and efficiently.
-        </p>
+        <p class="text-gray-500 text-sm">Get your orders delivered quickly and efficiently.</p>
       </div>
-
-      <!-- Feature 2 -->
       <div class="bg-base-200 p-6 rounded-xl text-center shadow-sm hover:shadow-md transition">
         <div class="text-primary mb-4 flex justify-center">
-          <!-- Headset Icon -->
           <i class="fa-solid fa-headset fa-2x"></i>
         </div>
         <h3 class="font-semibold text-lg mb-2">24/7 Support</h3>
-        <p class="text-gray-500 text-sm">
-          Our support team is available around the clock.
-        </p>
+        <p class="text-gray-500 text-sm">Our support team is available around the clock.</p>
       </div>
-
-      <!-- Feature 3 -->
       <div class="bg-base-200 p-6 rounded-xl text-center shadow-sm hover:shadow-md transition">
         <div class="text-primary mb-4 flex justify-center">
-          <!-- Shield Icon -->
           <i class="fa-solid fa-shield fa-2x"></i>
         </div>
         <h3 class="font-semibold text-lg mb-2">Secure Payment</h3>
-        <p class="text-gray-500 text-sm">
-          Experience safe and secure transactions.
-        </p>
+        <p class="text-gray-500 text-sm">Experience safe and secure transactions.</p>
       </div>
-
-      <!-- Feature 4 -->
       <div class="bg-base-200 p-6 rounded-xl text-center shadow-sm hover:shadow-md transition">
         <div class="text-primary mb-4 flex justify-center">
-          <!-- Rotate / Refresh Icon -->
           <i class="fa-solid fa-rotate fa-2x"></i>
         </div>
         <h3 class="font-semibold text-lg mb-2">Easy Returns</h3>
-        <p class="text-gray-500 text-sm">
-          Return your products easily within 30 days.
-        </p>
+        <p class="text-gray-500 text-sm">Return your products easily within 30 days.</p>
       </div>
-
     </div>
   </div>
 </section>
-
-
-
-
 
 <!-- Trending Section -->
 <section id="trending-section" class="py-16 bg-base-200">
@@ -154,33 +113,23 @@
   </div>
 </section>
 
-
-<!-- Footer Section -->
-<footer class="bg-primary text-white py-12">
+<!-- Footer -->
+<footer class="bg-gray-600 text-white py-12">
   <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8">
-
-    <!-- Left Column: Logo & Description -->
     <div class="space-y-4">
       <h3 class="text-2xl font-bold">SwiftCart</h3>
-      <p class="text-gray-200 text-sm">
-        Your one-stop online store for fashion, electronics, and more. Shop with confidence and style.
-      </p>
+      <p class="text-gray-200 text-sm">Your one-stop online store for fashion, electronics, and more. Shop with confidence and style.</p>
     </div>
-
-    <!-- Middle Column: Quick Links & Support -->
     <div class="flex justify-between">
-      <!-- Quick Links -->
       <div>
         <h4 class="font-semibold mb-3">Quick Links</h4>
         <ul class="space-y-2 text-gray-200">
           <li><a href="#hero-section" class="hover:text-gray-100">Home</a></li>
-          <li><a href="#products-section" class="hover:text-gray-100">Products</a></li>
+          <li><a href="products.html" class="hover:text-gray-100">Products</a></li>
           <li><a href="#features-section" class="hover:text-gray-100">About</a></li>
           <li><a href="#newsletter-section" class="hover:text-gray-100">Contact</a></li>
         </ul>
       </div>
-
-      <!-- Support Links -->
       <div>
         <h4 class="font-semibold mb-3">Support</h4>
         <ul class="space-y-2 text-gray-200">
@@ -191,61 +140,24 @@
         </ul>
       </div>
     </div>
-
-    <!-- Right Column: Newsletter -->
     <div>
       <h4 class="text-xl font-bold mb-3">Subscribe</h4>
-      <p class="text-gray-200 mb-4 text-sm">
-        Get updates on new products and exclusive offers.
-      </p>
       <form class="flex flex-col sm:flex-row gap-2">
-        <input 
-          type="email" 
-          placeholder="Enter your email" 
-          class="input input-bordered flex-1" 
-          required
-        >
-        <button type="submit" class="btn btn-secondary px-6">
-          Subscribe
-        </button>
+        <input type="email" placeholder="Enter your email" class="input input-bordered flex-1" required>
+        <button type="submit" class="btn btn-secondary px-6">Subscribe</button>
       </form>
     </div>
-
   </div>
-
-    <!-- Footer Bottom with Divider and Social Icons -->
   <div class="mt-10 border-t border-gray-500 pt-4 flex flex-col md:flex-row items-center justify-between text-gray-200 text-sm max-w-7xl mx-auto px-6">
-
-    <!-- Left: Copyright -->
-    <div>
-      &copy; 2026 SwiftCart. All rights reserved.
-    </div>
-
-    <!-- Right: Social Icons -->
+    <div>&copy; 2026 SwiftCart. All rights reserved.</div>
     <div class="flex space-x-4 mt-3 md:mt-0">
-      <a href="#" class="hover:text-white transition">
-        <i class="fab fa-facebook-f"></i>
-      </a>
-      <a href="#" class="hover:text-white transition">
-        <i class="fab fa-twitter"></i>
-      </a>
-      <a href="#" class="hover:text-white transition">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="#" class="hover:text-white transition">
-        <i class="fab fa-linkedin-in"></i>
-      </a>
+      <a href="#" class="hover:text-white"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" class="hover:text-white"><i class="fab fa-twitter"></i></a>
+      <a href="#" class="hover:text-white"><i class="fab fa-instagram"></i></a>
+      <a href="#" class="hover:text-white"><i class="fab fa-linkedin-in"></i></a>
     </div>
-
   </div>
-
 </footer>
-
-
-
-
-
-
 
 <script type="module" src="./js/main.js"></script>
 </body>

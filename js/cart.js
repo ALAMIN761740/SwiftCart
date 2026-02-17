@@ -1,7 +1,12 @@
-export const cart = [];
+export const cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 export function addToCart(product) {
   cart.push(product);
-  const cartCount = document.getElementById("cart-count");
-  if(cartCount) cartCount.textContent = cart.length;
+  localStorage.setItem("cart", JSON.stringify(cart));
+  updateCartCount();
+}
+
+export function updateCartCount() {
+  const count = document.getElementById("cart-count");
+  if (count) count.textContent = cart.length;
 }

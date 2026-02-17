@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Products - SwiftCart</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.10.2/dist/full.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="bg-gray-100">
+
+<!-- Navbar -->
+<header id="navbar-section">
+  <nav class="bg-white shadow-md px-6 py-3 flex justify-between items-center">
+    <a href="index.html" class="text-2xl font-bold text-primary flex items-center gap-2">
+      <i class="fa-solid fa-bag-shopping text-primary"></i> <span>SwiftCart</span>
+    </a>
+    <ul class="hidden md:flex space-x-6 text-gray-700 font-medium">
+      <li><a href="index.html" class="hover:text-primary">Home</a></li>
+      <li><a href="products.html" class="text-primary">Products</a></li>
+      <li><a href="index.html#features-section" class="hover:text-primary">About</a></li>
+      <li><a href="index.html#newsletter-section" class="hover:text-primary">Contact</a></li>
+    </ul>
+    <div class="flex items-center space-x-3">
+      <button class="btn p-3 relative">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span id="cart-count" class="absolute -top-1 -right-1 text-xs bg-red-500 text-white px-2 rounded-full">0</span>
+      </button>
+      <div class="dropdown md:hidden relative">
+        <button tabindex="0" class="btn btn-ghost p-3">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52 mt-2 absolute right-0">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="index.html#features-section">About</a></li>
+          <li><a href="index.html#newsletter-section">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<section class="py-10 text-center">
+  <h1 class="text-4xl font-bold mb-4">All Products</h1>
+  <div id="category-container" class="space-x-3"></div>
+</section>
+
+<div id="loading" class="text-center hidden">
+  <span class="loading loading-spinner loading-lg text-primary"></span>
+</div>
+
+<section class="pb-16">
+  <div class="max-w-7xl mx-auto px-6">
+    <div id="product-list" class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8"></div>
+  </div>
+</section>
+
+<!-- Modal -->
+<dialog id="productModal" class="modal">
+  <div class="modal-box">
+    <h3 id="modal-title" class="font-bold text-lg"></h3>
+    <p id="modal-description" class="py-4"></p>
+    <p id="modal-price" class="font-bold text-primary"></p>
+    <div class="modal-action">
+      <button id="modal-add" class="btn btn-primary">Add to Cart</button>
+      <form method="dialog">
+        <button class="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+
+<script type="module" src="./js/main.js"></script>
+</body>
+</html>
