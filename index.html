@@ -17,37 +17,57 @@
 </head>
 <body class="bg-gray-100">
 
-<!-- Navbar -->
-<header id="navbar-section">
-  <nav class="bg-white shadow-md px-6 py-3 flex justify-between items-center">
+<!-- Home Navbar -->
+<header>
+  <nav class="bg-white shadow-md px-6 py-3 flex justify-between items-center relative">
+    
+    <!-- Logo -->
     <a href="index.html" class="text-2xl font-bold text-primary flex items-center gap-2">
-      <i class="fa-solid fa-bag-shopping text-primary"></i> <span>SwiftCart</span>
+      <i class="fa-solid fa-bag-shopping text-primary"></i>
+      <span>SwiftCart</span>
     </a>
+
+    <!-- Desktop Menu -->
     <ul class="hidden md:flex space-x-6 text-gray-700 font-medium">
-      <li><a href="index.html" class="hover:text-primary">Home</a></li>
-      <li><a href="products.html" class="text-primary">Products</a></li>
-      <li><a href="index.html#features-section" class="hover:text-primary">About</a></li>
-      <li><a href="index.html#newsletter-section" class="hover:text-primary">Contact</a></li>
+      <li><a href="index.html" class="text-primary">Home</a></li>
+      <li><a href="products.html" class="hover:text-primary">Products</a></li>
+      <li><a href="#features-section" class="hover:text-primary">About</a></li>
+      <li><a href="#newsletter-section" class="hover:text-primary">Contact</a></li>
     </ul>
+
+    <!-- Right Side -->
     <div class="flex items-center space-x-3">
+      
+      <!-- Cart -->
       <button class="btn p-3 relative">
         <i class="fa-solid fa-cart-shopping"></i>
-        <span id="cart-count" class="absolute -top-1 -right-1 text-xs bg-red-500 text-white px-2 rounded-full">0</span>
+        <span id="cart-count-home"
+          class="absolute -top-1 -right-1 text-xs bg-red-500 text-white px-2 rounded-full">
+          0
+        </span>
       </button>
-      <div class="dropdown md:hidden relative">
-        <button tabindex="0" class="btn btn-ghost p-3">
+
+      <!-- Mobile Dropdown -->
+      <div class="dropdown dropdown-end md:hidden">
+        <label tabindex="0" class="btn btn-ghost p-3">
           <i class="fa-solid fa-bars"></i>
-        </button>
-        <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52 mt-2 absolute right-0">
-          <li><a href="index.html">Home</a></li>
+        </label>
+        <ul tabindex="0"
+          class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52 mt-3 z-[100]">
+          <li><a href="index.html" class="text-primary">Home</a></li>
           <li><a href="products.html">Products</a></li>
-          <li><a href="index.html#features-section">About</a></li>
-          <li><a href="index.html#newsletter-section">Contact</a></li>
+          <li><a href="#features-section">About</a></li>
+          <li><a href="#newsletter-section">Contact</a></li>
         </ul>
       </div>
+
     </div>
   </nav>
 </header>
+
+
+
+
 
 <!-- Hero Section -->
 <section id="hero-section" class="relative min-h-[520px] flex items-center"
@@ -61,6 +81,9 @@
     </div>
   </div>
 </section>
+
+
+
 
 <!-- Why Choose Us Section -->
 <section id="features-section" class="py-16 bg-base-100">
